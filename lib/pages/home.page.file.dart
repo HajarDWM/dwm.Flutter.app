@@ -13,11 +13,11 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   CircleAvatar(
-                    backgroundImage: AssetImage("images/profile.jpg"),
+                    backgroundImage: AssetImage("images/profile.png"),
                     radius: 50,
                   ),
                   CircleAvatar(
-                    backgroundImage: AssetImage("images/profile.jpg"),
+                    backgroundImage: AssetImage("images/profile.png"),
                     radius: 30,
                   ),
                 ],
