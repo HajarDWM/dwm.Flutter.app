@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
-class CounterPage extends StatelessWidget {
-  const CounterPage({super.key});
+class CounterPage extends StatefulWidget {
+  CounterPage({super.key});
+
+  @override
+  State<CounterPage> createState() => _CounterPageState();
+}
+
+class _CounterPageState extends State<CounterPage> {
+  int counter = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +21,34 @@ class CounterPage extends StatelessWidget {
         backgroundColor: Theme.of(context).primaryColor,
       ),
 
-      body: Center(child: Text("Counter Page")),
+      body: Center(
+        child: Text(
+          "Counter value => $counter",
+          style: Theme.of(context).textTheme.headlineLarge,
+        ),
+      ),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            child: Icon(Icons.add),
+            onPressed: () {
+              setState(() {
+                counter++;
+              });
+            },
+          ),
+          SizedBox(width: 10),
+          FloatingActionButton(
+            child: Icon(Icons.remove),
+            onPressed: () {
+              setState(() {
+                counter--;
+              });
+            },
+          ),
+        ],
+      ),
     );
   }
 }
