@@ -16,7 +16,10 @@ class MyDrawer extends StatelessWidget {
             itemIcon: Icon(Icons.home),
             handler: () {
               Navigator.pushNamed(context, "/home");
-              Navigator.of(context).pop();
+
+              /// KATEHELI WE TE3AWDI TESSDI HADI KATESSED
+              //  Navigator.of(context).pop();
+              ///oui
             },
           ),
           Divider(height: 1, color: Theme.of(context).primaryColor),
@@ -26,7 +29,7 @@ class MyDrawer extends StatelessWidget {
             handler: () {
               print("Going to /counter");
               Navigator.pushNamed(context, "/counter");
-              Navigator.of(context).pop();
+              //   Navigator.of(context).pop();
             },
           ),
           Divider(height: 1, color: Theme.of(context).primaryColor),
@@ -35,7 +38,7 @@ class MyDrawer extends StatelessWidget {
             itemIcon: Icon(Icons.chat),
             handler: () {
               Navigator.pushNamed(context, "/chat");
-              Navigator.of(context).pop();
+              //  Navigator.of(context).pop();
             },
           ),
         ],
